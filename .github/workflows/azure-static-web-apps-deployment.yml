@@ -9,14 +9,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '.website/**'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
-    paths:
-      - '.website/**'
 
 jobs:
   build_and_deploy_job:
@@ -51,7 +47,7 @@ jobs:
           action: 'upload'
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/.website" 
+          app_location: "" 
           api_location: ""
           output_location: "" 
           ###### End of Repository/Build Configurations ######
